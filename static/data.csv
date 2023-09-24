@@ -1,0 +1,98 @@
+id,element,element_description,category,total_value,in_sankey,rank,bool_val
+25,Alphazap,Expanded 5th generation forecast,163.58.170.150/22,49,1,54,1
+44,Alphazap,Expanded 5th generation forecast,237.242.236.2/17,49,1,50,0
+45,Alphazap,Expanded 5th generation forecast,237.242.236.2/17,49,1,65,1
+49,Alphazap,Expanded 5th generation forecast,237.242.236.2/17,49,1,72,1
+63,Alphazap,Expanded 5th generation forecast,41.66.9.180/8,49,1,65,1
+75,Andalax,Integrated incremental definition,48.24.62.120/13,21,1,20,1
+29,Andalax,Integrated incremental definition,48.24.62.120/13,21,1,34,0
+9,Andalax,Integrated incremental definition,48.24.62.120/13,21,1,31,0
+39,Andalax,Integrated incremental definition,48.24.62.120/13,21,1,80,0
+31,Andalax,Integrated incremental definition,48.24.62.120/13,21,1,28,0
+47,Andalax,Integrated incremental definition,48.24.62.120/13,21,1,47,1
+70,Flexidy,Grass-roots bifurcated encoding,221.224.170.251/19,88,1,27,0
+38,Flexidy,Grass-roots bifurcated encoding,95.3.168.110/26,88,1,11,0
+72,Flexidy,Grass-roots bifurcated encoding,48.24.62.120/13,88,1,78,1
+68,Flexidy,Grass-roots bifurcated encoding,183.151.53.176/25,88,1,20,1
+69,Flexidy,Grass-roots bifurcated encoding,50.230.41.29/10,88,1,40,0
+80,Flexidy,Grass-roots bifurcated encoding,248.176.228.48/2,88,1,2,1
+33,Konklab,Compatible local productivity,199.182.88.113/8,36,1,34,0
+20,Konklab,Compatible local productivity,163.58.170.150/22,36,1,80,1
+1,Konklab,Compatible local productivity,163.58.170.150/22,36,1,34,0
+13,Konklab,Compatible local productivity,163.58.170.150/22,36,1,54,1
+14,Konklab,Compatible local productivity,163.58.170.150/22,36,1,9,1
+15,Konklab,Compatible local productivity,163.58.170.150/22,36,1,71,1
+16,Konklab,Compatible local productivity,72.134.172.179/12,36,1,21,1
+17,Konklab,Compatible local productivity,218.179.173.117/6,36,1,37,0
+34,Konklab,Compatible local productivity,213.198.0.206/15,36,1,76,1
+71,Konklab,Compatible local productivity,27.239.15.235/14,36,1,59,1
+78,Konklab,Compatible local productivity,150.61.38.59/6,36,1,10,0
+4,Flexidy,Grass-roots bifurcated encoding,1.191.15.231/19,32,1,42,0
+46,Flexidy,Grass-roots bifurcated encoding,195.23.159.212/11,32,1,57,1
+35,Flexidy,Grass-roots bifurcated encoding,100.216.149.104/1,32,1,53,1
+43,Flexidy,Grass-roots bifurcated encoding,187.142.96.108/3,32,1,39,1
+60,Flexidy,Grass-roots bifurcated encoding,226.132.55.254/31,32,1,80,0
+41,Flexidy,Grass-roots bifurcated encoding,226.132.55.254/31,32,1,27,0
+3,Flexidy,Grass-roots bifurcated encoding,226.132.55.254/31,32,1,31,0
+7,Flexidy,Grass-roots bifurcated encoding,226.132.55.254/31,32,1,56,1
+52,Flexidy,Grass-roots bifurcated encoding,226.132.55.254/31,32,1,28,1
+67,Flexidy,Grass-roots bifurcated encoding,125.69.57.9/1,32,1,15,1
+26,Flexidy,Grass-roots bifurcated encoding,173.118.13.77/9,32,1,36,0
+73,Flexidy,Grass-roots bifurcated encoding,194.255.15.228/14,32,1,62,1
+36,Flexidy,Grass-roots bifurcated encoding,115.209.195.152/14,32,1,3,1
+11,Flexidy,Grass-roots bifurcated encoding,132.169.84.4/17,32,1,52,0
+40,Flexidy,Grass-roots bifurcated encoding,247.79.194.111/15,32,1,67,1
+59,Stim,Automated exuding focus group,226.132.55.254/31,59,1,79,0
+77,Stim,Automated exuding focus group,76.2.61.118/23,59,1,76,1
+10,Stim,Automated exuding focus group,237.242.236.2/17,59,1,67,0
+28,Stim,Automated exuding focus group,237.242.236.2/17,59,1,42,0
+79,Stim,Automated exuding focus group,237.242.236.2/17,59,1,32,0
+19,Treeflex,Robust human-resource algorithm,237.242.236.2/17,40,1,43,0
+21,Treeflex,Robust human-resource algorithm,237.242.236.2/17,40,1,47,0
+42,Treeflex,Robust human-resource algorithm,163.58.170.150/22,40,1,19,0
+23,Treeflex,Robust human-resource algorithm,49.243.207.227/11,40,1,34,1
+48,Treeflex,Robust human-resource algorithm,160.9.168.52/9,40,1,66,1
+32,Treeflex,Robust human-resource algorithm,72.111.149.13/6,40,1,74,0
+30,Treeflex,Robust human-resource algorithm,215.224.79.104/15,40,1,74,1
+5,Tres-Zap,Centralized dynamic archive,237.242.236.2/17,96,1,44,1
+18,Tres-Zap,Centralized dynamic archive,19.117.19.106/28,96,1,7,1
+58,Tres-Zap,Centralized dynamic archive,43.41.137.207/6,96,1,68,0
+74,Tres-Zap,Centralized dynamic archive,244.108.16.219/4,96,1,10,1
+57,Tres-Zap,Centralized dynamic archive,183.151.53.176/25,96,1,19,1
+8,Tres-Zap,Centralized dynamic archive,183.151.53.176/25,96,1,79,0
+64,Tres-Zap,Centralized dynamic archive,237.242.236.2/17,96,1,74,1
+2,Tres-Zap,Centralized dynamic archive,183.151.53.176/25,96,1,58,0
+27,Alphazap,Expanded 5th generation forecast,183.151.53.176/25,48,1,22,1
+66,Alphazap,Expanded 5th generation forecast,191.67.40.72/15,48,1,32,0
+51,Alphazap,Expanded 5th generation forecast,68.149.187.176/21,48,1,25,0
+24,Alphazap,Expanded 5th generation forecast,99.148.231.73/29,48,1,46,1
+62,Alphazap,Expanded 5th generation forecast,230.20.83.4/8,48,1,10,1
+76,Alphazap,Expanded 5th generation forecast,34.39.29.166/29,48,1,43,0
+6,Alphazap,Expanded 5th generation forecast,237.242.236.2/17,48,1,48,1
+22,Y-Solowarm,Organized 24 hour time-frame,237.242.236.2/17,51,1,76,0
+37,Y-Solowarm,Organized 24 hour time-frame,237.242.236.2/17,51,1,66,1
+53,Y-Solowarm,Organized 24 hour time-frame,64.229.134.77/5,51,1,76,0
+54,Y-Solowarm,Organized 24 hour time-frame,64.229.134.77/5,51,1,64,0
+55,Y-Solowarm,Organized 24 hour time-frame,64.229.134.77/5,51,1,9,1
+56,Y-Solowarm,Organized 24 hour time-frame,237.242.236.2/17,51,1,60,0
+61,Y-Solowarm,Organized 24 hour time-frame,64.229.134.77/5,51,1,71,1
+50,Y-Solowarm,Organized 24 hour time-frame,64.229.134.77/5,51,1,67,0
+65,Y-Solowarm,Organized 24 hour time-frame,64.229.134.77/5,51,1,78,1
+12,Y-Solowarm,Organized 24 hour time-frame,64.229.134.77/5,51,1,65,1
+101,Bamity,Polarised empowering instruction set,244.108.16.219/4,44,1,65,1
+102,Bamity,Polarised empowering instruction set,64.229.134.77/5,44,1,65,1
+103,Bamity,Polarised empowering instruction set,64.229.134.77/5,44,1,65,1
+104,Bamity,Polarised empowering instruction set,237.242.236.2/17,44,1,65,1
+105,Bamity,Polarised empowering instruction set,237.242.236.2/17,44,1,65,1
+106,Bamity,Polarised empowering instruction set,237.242.236.2/17,44,1,65,1
+107,Bamity,Polarised empowering instruction set,183.151.53.176/25,44,1,65,1
+108,Bamity,Polarised empowering instruction set,183.151.53.176/25,44,1,65,1
+109,Bamity,Polarised empowering instruction set,183.151.53.176/25,44,1,65,1
+110,Bigtax,Monitored heuristic secured line,,67,1,65,1
+111,Bigtax,Monitored heuristic secured line,,67,1,65,1
+112,Bigtax,Monitored heuristic secured line,,67,1,65,1
+113,Bigtax,Monitored heuristic secured line,,67,1,65,1
+114,Bigtax,Monitored heuristic secured line,,67,1,65,1
+115,Bigtax,Monitored heuristic secured line,,67,1,65,1
+116,Bigtax,Monitored heuristic secured line,,67,1,65,1
+117,Bigtax,Monitored heuristic secured line,,67,1,65,1
