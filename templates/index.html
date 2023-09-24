@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Concentric Network</title>
+</head>
+<body>
+<h1 style="font-family: monospace;"> Concentric Network Diagram</h1>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<!-- partial:index.partial.html -->
+
+
+  <script src="https://use.typekit.net/yag6yaf.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</body>
+</html>
+<html>
+<head>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+  <meta charset="utf-8">
+  
+
+  <style>
+
+    svg{
+    padding:150px 100px 100px 300px;
+}
+
+  line.node-link, path.node-link {
+    fill: none;
+    
+
+  }
+
+  circle.node+text {
+    text-anchor: middle;
+  }
+  text {
+    font-family: monospace;
+    pointer-events: none;
+  }
+
+  </style>
+</head>
+<body>
+<script type="text/javascript">
+
+var nodes_category = []
+var nodes_element = []
+var links = []
+
+var data = {% autoescape off %}{{ myData }}{% endautoescape %};
+var elements_list = []
+var category_list = []
+
+console.log(data)
+
+index_lookup = {}
+currentSize = 0
+for (var row in data){
+      if (!elements_list.includes(data[row]["element"])){
+        nodes_element.push({
+            "id":data[row]["element"],
+            "description":data[row]["element_description"],
+            "index": data[row]["element"],
+            "total_value": data[row]["total_value"],
+            "level": 1
+          });
+        index_lookup[data[row]["element"]] = currentSize
+        currentSize = currentSize + 1
+        elements_list.push(data[row]["element"])
+      }  
+  };
+
+  for (var row in data){
+      if (!category_list.includes(data[row]["category"])){
+        nodes_category.push({
+            "id":data[row]["category"],
+            "index": data[row]["category"],
+            "description":"",
+            "total_value": 20,
+            "level":2
+          });
+        index_lookup[data[row]["category"]] = currentSize
+        currentSize = currentSize + 1
+        category_list.push(data[row]["category"])
+      }  
+  };
+
+  for (var row in data){
+    links.push({
+      "target":index_lookup[data[row]["element"]],
+      "source":index_lookup[data[row]["category"]],
+      "value": 1
+    })
+  }
+
+
+
+
+var nodes = nodes_element.concat(nodes_category)
+console.log(nodes)
+
+var colorScheme = d3.scale.ordinal()
+                .domain(nodes_element, (function(d) {
+                    return d.id
+                }))
+                .range(["#FFADAF", "#FFC980", "#CB91A7", "#9DACCB", "#95D1A5", 
+                "#F586C6", "#BFDD81", "#F18489", "#80BCEC", "#91CBB5"]);
+
+var default_opacity = 0.3
+
+var width = 1200,
+    height = 1200;
+
+var force = d3.layout.force()
+    .nodes(nodes)
+    .links(links)
+    .size([width, height]);
+
+// evenly spaces nodes along arc
+var circleCoord = function(node, index, num_nodes){
+    var circumference = circle.node().getTotalLength();
+    var pointAtLength = function(l){return circle.node().getPointAtLength(l)};
+    var sectionLength = (circumference)/num_nodes;
+    var position = sectionLength*index+sectionLength/2;
+    return pointAtLength(circumference-position)
+}
+
+var SmallcircleCoord = function(node, index, num_nodes){
+    var circumference = circle2.node().getTotalLength();
+    var pointAtLength = function(l){return circle2.node().getPointAtLength(l)};
+    var sectionLength = (circumference)/num_nodes;
+    var position = sectionLength*index+sectionLength/2;
+    return pointAtLength(circumference-position)
+}
+
+// fades out lines that aren't connected to node d
+var is_connected = function(d, opacity) {
+    lines.transition().style("stroke-opacity", function(o) {
+        return o.source === d || o.target === d ? 1 : opacity;
+    });
+}
+
+var revert_on_mouse_out = function(d) {
+    lines.transition().style("stroke-opacity", function(o) {
+        return default_opacity;
+    });
+}
+
+var isnotService = function(node) {
+    if (!category_list.includes(node.id)) {
+        return node.description;
+    } 
+    return node.id.trim();
+};
+
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var dim = width-100
+var circle = svg.append("path")
+    .attr("d", "M 50, "+(dim/2+50)+" a "+dim/2+","+dim/2+" 0 1,0 "+dim+",0 a "+dim/2+","+dim/2+" 0 1,0 "+dim*-1+",0")
+    .style("fill", "#f5f5f5");
+
+var circle2 = svg.append("path")
+    .attr("d", "M 250, "+(dim/2+50)+" a "+(dim/2)/1.5+","+(dim/2)/1.5+" 0 1,0 "+dim/1.5+",0 a "+(dim/2)/1.5+","+(dim/2)/1.5+" 0 1,0 "+dim*-1/1.5+",0")
+    .style("fill", "#f5f5f5");
+
+force.start();
+
+nodes_category.forEach(function(n, i) {
+    var coord = circleCoord(n, i, nodes_category.length)
+    n.x = coord.x
+    n.y = coord.y
+});
+
+nodes_element.forEach(function(n, i) {
+    var coord = SmallcircleCoord(n, i, nodes_element.length)
+    n.x = coord.x
+    n.y = coord.y
+});
+
+var lines = svg.selectAll("path.node-link")
+    .data(links).enter().append("path")
+    .attr("class", "node-link")
+    .attr("stroke-width", "4")
+    .attr("stroke-opacity", default_opacity)
+    .attr("stroke", function (d){ return colorScheme(d.target.id)})
+    .attr("d", function(d) {
+        var dx = d.target.x - d.source.x,
+            dy = d.target.y - d.source.y,
+            dr = Math.sqrt(dx * dx + dy * dy);
+        return "M" + 
+            d.source.x + "," + 
+            d.source.y + "A" + 
+            dr + "," + dr + " 0 0,1 " + 
+            d.target.x + "," + 
+            d.target.y;
+    });
+
+var gnodes = svg.selectAll('g.gnode')
+    .data(nodes).enter().append('g')
+    .attr("transform", function(d) {
+        return "translate("+d.x+","+d.y+")"
+    })
+    .classed('gnode', true);
+
+var tooltip = d3.select("body")
+    .append("div")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("font-family", "monospace")
+    .style("visibility", "hidden")
+    .style("background", "black")
+    .style("opacity", 1)
+    .style("font-size", "15px")
+    .style("border-radius", "6px")
+    .style("padding", "5px 5px")
+    .style("color", "white")
+    .style("max-width","200px")
+    .style("word-wrap","break-word")
+    .style("width", "100%");
+
+
+var node = gnodes.append("circle")
+    //.attr("r", function(d){return Math.log(d.total_value)})
+    .attr("r", function(d){return (d.total_value/4)})
+    .attr("class", "node")
+    .attr("fill", function(d) {if (elements_list.includes(d.id)){
+        return colorScheme(d.id);
+    } else {
+        return "grey"
+       }
+    })
+    .on("mouseenter", function(d) {
+        is_connected(d, 0.1)
+        //node.transition().duration(100).attr("r", function(d){return Math.log(d.total_value)})
+        node.transition().duration(100).attr("r", function(d){return (d.total_value/4)})
+        //d3.select(this).transition().duration(100).attr("r", function(d){return Math.log(d.total_value)*2})
+        d3.select(this).transition().duration(100).attr("r", function(d){return (d.total_value/4)*2}) 
+    })
+    .on("mouseleave", function(d) {
+        is_connected(d, 0.1);
+        //node.transition().duration(100).attr("r", function(d){return Math.log(d.total_value)});
+        node.transition().duration(100).attr("r", function(d){return (d.total_value/4)});
+        revert_on_mouse_out(d)
+        
+    })
+
+    .on("mouseover", function(d){tooltip.text(isnotService(d)); return tooltip.style("visibility", "visible");})
+      .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+      .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+
+var labels = gnodes.append("text")
+    .attr("dy", 5)
+    .attr("font-weight", "bold")
+    .text(function(d){if (category_list.includes(d.id)){
+        return '';} else{
+            return d.id;
+        }
+    })
+
+</script>
+
+</body>
+</html>
