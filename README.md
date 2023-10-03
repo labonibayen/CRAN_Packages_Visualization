@@ -1,7 +1,7 @@
 # flask_network_graph
-Concentric network graph using Flask. To represent many to many relationships, using randomly generated data.
+A proof of concept for a concentric network graph using Flask. This visualization can be used to represent many to many relationships. Currently it's usingrandomly generated junk data.
 
-On mouse over, edged and nodes are highlighted and tooltips display descriptions.
+On mouseover, edged and nodes are highlighted and tooltips display descriptions. On mouseout, these disappear.
 
 See here for live version: http://167.71.178.218/concentricnetwork
 
