@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/concentricnetwork")
 def hello():
-    filename = '~/concentricnetwork/static/data.csv'
+    filename = '~/concentricnetwork/static/cran_data.csv'
     data = pd.read_csv(filename, header=0)
     final_data = data.to_json(orient="records")
     return render_template('index.html', myData=final_data)
