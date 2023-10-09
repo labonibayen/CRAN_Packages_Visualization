@@ -8,7 +8,7 @@ This visualization is responsive to mouse hovers. When mousing over a node, the 
 
 On mouseover, there are also tooltips that describe the CRAN package, or provide a brief description of the programming language.
 
-<img width="300" alt="Screenshot 2023-10-09 at 5 03 47 PM" src="https://github.com/labonibayen/flask_network_graph/assets/26695981/b82f0ec8-b97c-42c1-9c78-92f20f052511">
+<img width="972" alt="Screenshot 2023-10-09 at 5 03 47 PM" src="https://github.com/labonibayen/flask_network_graph/assets/26695981/b82f0ec8-b97c-42c1-9c78-92f20f052511">
 <img width="972" alt="Screenshot 2023-10-09 at 5 03 19 PM" src="https://github.com/labonibayen/flask_network_graph/assets/26695981/02662019-b316-4cf9-ade4-b639d486b13a">
 
 # Notes
