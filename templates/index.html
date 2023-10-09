@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Concentric Network</title>
+  <title>Concentric Network of Cran Packages</title>
 </head>
 <body>
-<h1 style="font-family: monospace;"> Concentric Network Diagram</h1>
+<h1 style="font-family: monospace;"> Concentric Network of Cran Packages</h1>
 <!-- partial:index.partial.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -49,52 +49,52 @@
 <body>
 <script type="text/javascript">
 
-var nodes_category = []
-var nodes_element = []
+var nodes_pkg_name = []
+var nodes_language = []
 var links = []
 
 var data = {% autoescape off %}{{ myData }}{% endautoescape %};
-var elements_list = []
-var category_list = []
+var languages_list = []
+var pkg_name_list = []
 
 console.log(data)
 
 index_lookup = {}
 currentSize = 0
 for (var row in data){
-      if (!elements_list.includes(data[row]["element"])){
-        nodes_element.push({
-            "id":data[row]["element"],
-            "description":data[row]["element_description"],
-            "index": data[row]["element"],
-            "total_value": data[row]["total_value"],
+      if (!languages_list.includes(data[row]["language"])){
+        nodes_language.push({
+            "id":data[row]["language"],
+            "description":data[row]["description"],
+            "index": data[row]["language"],
+            "count": data[row]["count"],
             "level": 1
           });
-        index_lookup[data[row]["element"]] = currentSize
+        index_lookup[data[row]["language"]] = currentSize
         currentSize = currentSize + 1
-        elements_list.push(data[row]["element"])
+        languages_list.push(data[row]["language"])
       }  
   };
 
   for (var row in data){
-      if (!category_list.includes(data[row]["category"])){
-        nodes_category.push({
-            "id":data[row]["category"],
-            "index": data[row]["category"],
+      if (!pkg_name_list.includes(data[row]["pkg_name"])){
+        nodes_pkg_name.push({
+            "id":data[row]["pkg_name"],
+            "index": data[row]["pkg_name"],
             "description":"",
-            "total_value": 20,
+            "count": 10,
             "level":2
           });
-        index_lookup[data[row]["category"]] = currentSize
+        index_lookup[data[row]["pkg_name"]] = currentSize
         currentSize = currentSize + 1
-        category_list.push(data[row]["category"])
+        pkg_name_list.push(data[row]["pkg_name"])
       }  
   };
 
   for (var row in data){
     links.push({
-      "target":index_lookup[data[row]["element"]],
-      "source":index_lookup[data[row]["category"]],
+      "target":index_lookup[data[row]["language"]],
+      "source":index_lookup[data[row]["pkg_name"]],
       "value": 1
     })
   }
@@ -102,11 +102,11 @@ for (var row in data){
 
 
 
-var nodes = nodes_element.concat(nodes_category)
+var nodes = nodes_language.concat(nodes_pkg_name)
 console.log(nodes)
 
 var colorScheme = d3.scale.ordinal()
-                .domain(nodes_element, (function(d) {
+                .domain(nodes_language, (function(d) {
                     return d.id
                 }))
                 .range(["#FFADAF", "#FFC980", "#CB91A7", "#9DACCB", "#95D1A5", 
@@ -153,11 +153,19 @@ var revert_on_mouse_out = function(d) {
 }
 
 var isnotService = function(node) {
-    if (!category_list.includes(node.id)) {
+    if (!pkg_name_list.includes(node.id)) {
         return node.description;
     } 
     return node.id.trim();
 };
+
+var determine_node_size = function(node){
+    if(node.count/2 <= 2){
+        return node.count*2
+    } else{
+        return node.count/2
+    }
+}
 
 
 var svg = d3.select("body").append("svg")
@@ -170,19 +178,19 @@ var circle = svg.append("path")
     .style("fill", "#f5f5f5");
 
 var circle2 = svg.append("path")
-    .attr("d", "M 250, "+(dim/2+50)+" a "+(dim/2)/1.5+","+(dim/2)/1.5+" 0 1,0 "+dim/1.5+",0 a "+(dim/2)/1.5+","+(dim/2)/1.5+" 0 1,0 "+dim*-1/1.5+",0")
+    .attr("d", "M 400, "+(dim/2+50)+" a "+(dim/2)/2+","+(dim/2)/2+" 0 1,0 "+dim/2+",0 a "+(dim/2)/2+","+(dim/2)/2+" 0 1,0 "+dim*-1/2+",0")
     .style("fill", "#f5f5f5");
 
 force.start();
 
-nodes_category.forEach(function(n, i) {
-    var coord = circleCoord(n, i, nodes_category.length)
+nodes_pkg_name.forEach(function(n, i) {
+    var coord = circleCoord(n, i, nodes_pkg_name.length)
     n.x = coord.x
     n.y = coord.y
 });
 
-nodes_element.forEach(function(n, i) {
-    var coord = SmallcircleCoord(n, i, nodes_element.length)
+nodes_language.forEach(function(n, i) {
+    var coord = SmallcircleCoord(n, i, nodes_language.length)
     n.x = coord.x
     n.y = coord.y
 });
@@ -230,10 +238,10 @@ var tooltip = d3.select("body")
 
 
 var node = gnodes.append("circle")
-    //.attr("r", function(d){return Math.log(d.total_value)})
-    .attr("r", function(d){return (d.total_value/4)})
+    //.attr("r", function(d){return Math.log(d.count)})
+    .attr("r", function(d){return determine_node_size(d)})
     .attr("class", "node")
-    .attr("fill", function(d) {if (elements_list.includes(d.id)){
+    .attr("fill", function(d) {if (languages_list.includes(d.id)){
         return colorScheme(d.id);
     } else {
         return "grey"
@@ -241,15 +249,15 @@ var node = gnodes.append("circle")
     })
     .on("mouseenter", function(d) {
         is_connected(d, 0.1)
-        //node.transition().duration(100).attr("r", function(d){return Math.log(d.total_value)})
-        node.transition().duration(100).attr("r", function(d){return (d.total_value/4)})
-        //d3.select(this).transition().duration(100).attr("r", function(d){return Math.log(d.total_value)*2})
-        d3.select(this).transition().duration(100).attr("r", function(d){return (d.total_value/4)*2}) 
+        //node.transition().duration(100).attr("r", function(d){return Math.log(d.count)})
+        node.transition().duration(100).attr("r", function(d){return determine_node_size(d)})
+        //d3.select(this).transition().duration(100).attr("r", function(d){return Math.log(d.count)*2})
+        d3.select(this).transition().duration(100).attr("r", function(d){return determine_node_size(d)*2}) 
     })
     .on("mouseleave", function(d) {
         is_connected(d, 0.1);
-        //node.transition().duration(100).attr("r", function(d){return Math.log(d.total_value)});
-        node.transition().duration(100).attr("r", function(d){return (d.total_value/4)});
+        //node.transition().duration(100).attr("r", function(d){return Math.log(d.count)});
+        node.transition().duration(100).attr("r", function(d){return determine_node_size(d)});
         revert_on_mouse_out(d)
         
     })
@@ -261,7 +269,7 @@ var node = gnodes.append("circle")
 var labels = gnodes.append("text")
     .attr("dy", 5)
     .attr("font-weight", "bold")
-    .text(function(d){if (category_list.includes(d.id)){
+    .text(function(d){if (pkg_name_list.includes(d.id)){
         return '';} else{
             return d.id;
         }
