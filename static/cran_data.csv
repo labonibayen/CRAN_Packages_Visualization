@@ -1,0 +1,151 @@
+,id,language,pkg_name,count,description
+0,0,C++,WeightedCluster,14,C++ is a cross-platform language that can be used to create high-performance applications.
+1,1,C++,scoper,14,C++ is a cross-platform language that can be used to create high-performance applications.
+2,2,C++,mrfDepth,14,C++ is a cross-platform language that can be used to create high-performance applications.
+3,3,C++,sbmSDP,14,C++ is a cross-platform language that can be used to create high-performance applications.
+4,4,C++,psd,14,C++ is a cross-platform language that can be used to create high-performance applications.
+5,5,C++,corpustools,14,C++ is a cross-platform language that can be used to create high-performance applications.
+6,6,C++,moveWindSpeed,14,C++ is a cross-platform language that can be used to create high-performance applications.
+7,7,C++,RmecabKo,14,C++ is a cross-platform language that can be used to create high-performance applications.
+8,8,C++,acebayes,14,C++ is a cross-platform language that can be used to create high-performance applications.
+9,9,C++,RClickhouse,14,C++ is a cross-platform language that can be used to create high-performance applications.
+10,10,C++,Quartet,14,C++ is a cross-platform language that can be used to create high-performance applications.
+11,11,C++,lpirfs,14,C++ is a cross-platform language that can be used to create high-performance applications.
+12,12,C++,Rserve,14,C++ is a cross-platform language that can be used to create high-performance applications.
+13,13,C++,urltools,14,C++ is a cross-platform language that can be used to create high-performance applications.
+14,14,CSS,EML,3,CSS stands for Cascading Style Sheet and it's a programming language used to define the style of a website together with HTML.
+15,15,CSS,modelDown,3,CSS stands for Cascading Style Sheet and it's a programming language used to define the style of a website together with HTML.
+16,16,CSS,dashboard,3,CSS stands for Cascading Style Sheet and it's a programming language used to define the style of a website together with HTML.
+17,17,HTML,gdata,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+18,18,HTML,plotdap,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+19,19,HTML,squid,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+20,20,HTML,Luminescence,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+21,21,HTML,geoknife,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+22,22,HTML,tint,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+23,23,HTML,pseval,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+24,24,HTML,fingertipscharts,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+25,25,HTML,stationery,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+26,26,HTML,subscreen,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+27,27,HTML,phonics,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+28,28,HTML,HiClimR,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+29,29,HTML,memo,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+30,30,HTML,interlineaR,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+31,31,HTML,corrr,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+32,32,HTML,DatabionicSwarm,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+33,33,HTML,tangram,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+34,34,HTML,XRJulia,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+35,35,HTML,ccafs,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+36,36,HTML,rslurm,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+37,37,HTML,repo,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+38,38,HTML,bikedata,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+39,39,HTML,DataExplorer,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+40,40,HTML,photobiologyFilters,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+41,41,HTML,later,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+42,42,HTML,DBItest,26,HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+43,43,JavaScript,gridDebug,3,"JavaScript is a dynamic programming language that's used for web development, in web applications, for game development, and lots more."
+44,44,JavaScript,GWSDAT,3,"JavaScript is a dynamic programming language that's used for web development, in web applications, for game development, and lots more."
+45,45,JavaScript,idem,3,"JavaScript is a dynamic programming language that's used for web development, in web applications, for game development, and lots more."
+46,46,Python,rlo,1,"Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis."
+47,47,R,jsTree,103,R is a language and environment for statistical computing and graphics
+48,48,R,rrpack,103,R is a language and environment for statistical computing and graphics
+49,49,R,rWBclimate,103,R is a language and environment for statistical computing and graphics
+50,50,R,febr,103,R is a language and environment for statistical computing and graphics
+51,51,R,Ac3net,103,R is a language and environment for statistical computing and graphics
+52,52,R,BHH2,103,R is a language and environment for statistical computing and graphics
+53,53,R,gim,103,R is a language and environment for statistical computing and graphics
+54,54,R,randquotes,103,R is a language and environment for statistical computing and graphics
+55,55,R,bayesTFR,103,R is a language and environment for statistical computing and graphics
+56,56,R,fNonlinear,103,R is a language and environment for statistical computing and graphics
+57,57,R,ANOM,103,R is a language and environment for statistical computing and graphics
+58,58,R,ipptoolbox,103,R is a language and environment for statistical computing and graphics
+59,59,R,fastdigest,103,R is a language and environment for statistical computing and graphics
+60,60,R,walkscoreAPI,103,R is a language and environment for statistical computing and graphics
+61,61,R,Quandl,103,R is a language and environment for statistical computing and graphics
+62,62,R,SCGLR,103,R is a language and environment for statistical computing and graphics
+63,63,R,FlexGAM,103,R is a language and environment for statistical computing and graphics
+64,64,R,RcppClassicExamples,103,R is a language and environment for statistical computing and graphics
+65,65,R,SnakesAndLaddersAnalysis,103,R is a language and environment for statistical computing and graphics
+66,66,R,sokoban,103,R is a language and environment for statistical computing and graphics
+67,67,R,miscor,103,R is a language and environment for statistical computing and graphics
+68,68,R,StakeholderAnalysis,103,R is a language and environment for statistical computing and graphics
+69,69,R,mi,103,R is a language and environment for statistical computing and graphics
+70,70,R,Rsomoclu,103,R is a language and environment for statistical computing and graphics
+71,71,R,future.callr,103,R is a language and environment for statistical computing and graphics
+72,72,R,AWR.Kinesis,103,R is a language and environment for statistical computing and graphics
+73,73,R,operator.tools,103,R is a language and environment for statistical computing and graphics
+74,74,R,MonteCarlo,103,R is a language and environment for statistical computing and graphics
+75,75,R,LeLogicielR,103,R is a language and environment for statistical computing and graphics
+76,76,R,KMDA,103,R is a language and environment for statistical computing and graphics
+77,77,R,eiPack,103,R is a language and environment for statistical computing and graphics
+78,78,R,somplot,103,R is a language and environment for statistical computing and graphics
+79,79,R,pairedCI,103,R is a language and environment for statistical computing and graphics
+80,80,R,spectralAnalysis,103,R is a language and environment for statistical computing and graphics
+81,81,R,IAT,103,R is a language and environment for statistical computing and graphics
+82,82,R,RKUM,103,R is a language and environment for statistical computing and graphics
+83,83,R,nsROC,103,R is a language and environment for statistical computing and graphics
+84,84,R,waveformlidar,103,R is a language and environment for statistical computing and graphics
+85,85,R,aroma.core,103,R is a language and environment for statistical computing and graphics
+86,86,R,hoardr,103,R is a language and environment for statistical computing and graphics
+87,87,R,mvctm,103,R is a language and environment for statistical computing and graphics
+88,88,R,expose,103,R is a language and environment for statistical computing and graphics
+89,89,R,complexity,103,R is a language and environment for statistical computing and graphics
+90,90,R,anomalize,103,R is a language and environment for statistical computing and graphics
+91,91,R,emma,103,R is a language and environment for statistical computing and graphics
+92,92,R,funModeling,103,R is a language and environment for statistical computing and graphics
+93,93,R,WDI,103,R is a language and environment for statistical computing and graphics
+94,94,R,federalregister,103,R is a language and environment for statistical computing and graphics
+95,95,R,vcr,103,R is a language and environment for statistical computing and graphics
+96,96,R,CCP,103,R is a language and environment for statistical computing and graphics
+97,97,R,IPMpack,103,R is a language and environment for statistical computing and graphics
+98,98,R,kza,103,R is a language and environment for statistical computing and graphics
+99,99,R,Reliability,103,R is a language and environment for statistical computing and graphics
+100,100,R,lmridge,103,R is a language and environment for statistical computing and graphics
+101,101,R,MultiRobust,103,R is a language and environment for statistical computing and graphics
+102,102,R,petrinetR,103,R is a language and environment for statistical computing and graphics
+103,103,R,CorporaCoCo,103,R is a language and environment for statistical computing and graphics
+104,104,R,FRCC,103,R is a language and environment for statistical computing and graphics
+105,105,R,fgac,103,R is a language and environment for statistical computing and graphics
+106,106,R,splm,103,R is a language and environment for statistical computing and graphics
+107,107,R,astrochron,103,R is a language and environment for statistical computing and graphics
+108,108,R,emplik,103,R is a language and environment for statistical computing and graphics
+109,109,R,PhyloMeasures,103,R is a language and environment for statistical computing and graphics
+110,110,R,PCDimension,103,R is a language and environment for statistical computing and graphics
+111,111,R,npbr,103,R is a language and environment for statistical computing and graphics
+112,112,R,RWildbook,103,R is a language and environment for statistical computing and graphics
+113,113,R,Devore7,103,R is a language and environment for statistical computing and graphics
+114,114,R,ecm,103,R is a language and environment for statistical computing and graphics
+115,115,R,implyr,103,R is a language and environment for statistical computing and graphics
+116,116,R,corpustools,103,R is a language and environment for statistical computing and graphics
+117,117,R,mpcv,103,R is a language and environment for statistical computing and graphics
+118,118,R,trread,103,R is a language and environment for statistical computing and graphics
+119,119,R,negenes,103,R is a language and environment for statistical computing and graphics
+120,120,R,RI2by2,103,R is a language and environment for statistical computing and graphics
+121,121,R,CIEE,103,R is a language and environment for statistical computing and graphics
+122,122,R,xaringan,103,R is a language and environment for statistical computing and graphics
+123,123,R,aptg,103,R is a language and environment for statistical computing and graphics
+124,124,R,radmixture,103,R is a language and environment for statistical computing and graphics
+125,125,R,adehabitatHR,103,R is a language and environment for statistical computing and graphics
+126,126,R,Sejong,103,R is a language and environment for statistical computing and graphics
+127,127,R,mRm,103,R is a language and environment for statistical computing and graphics
+128,128,R,vortexRdata,103,R is a language and environment for statistical computing and graphics
+129,129,R,adeptdata,103,R is a language and environment for statistical computing and graphics
+130,130,R,WRTDStidal,103,R is a language and environment for statistical computing and graphics
+131,131,R,clickstream,103,R is a language and environment for statistical computing and graphics
+132,132,R,qdm,103,R is a language and environment for statistical computing and graphics
+133,133,R,NormalGamma,103,R is a language and environment for statistical computing and graphics
+134,134,R,ensembleBMA,103,R is a language and environment for statistical computing and graphics
+135,135,R,patternize,103,R is a language and environment for statistical computing and graphics
+136,136,R,spotGUI,103,R is a language and environment for statistical computing and graphics
+137,137,R,rorutadis,103,R is a language and environment for statistical computing and graphics
+138,138,R,granovaGG,103,R is a language and environment for statistical computing and graphics
+139,139,R,NIPTeR,103,R is a language and environment for statistical computing and graphics
+140,140,R,ExpDes,103,R is a language and environment for statistical computing and graphics
+141,141,R,SocialPosition,103,R is a language and environment for statistical computing and graphics
+142,142,R,metavcov,103,R is a language and environment for statistical computing and graphics
+143,143,R,cmmr,103,R is a language and environment for statistical computing and graphics
+144,144,R,RHawkes,103,R is a language and environment for statistical computing and graphics
+145,145,R,mdpeer,103,R is a language and environment for statistical computing and graphics
+146,146,R,distr6,103,R is a language and environment for statistical computing and graphics
+147,147,R,moveWindSpeed,103,R is a language and environment for statistical computing and graphics
+148,148,R,chunkR,103,R is a language and environment for statistical computing and graphics
+149,149,R,alignfigR,103,R is a language and environment for statistical computing and graphics
