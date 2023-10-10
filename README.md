@@ -18,7 +18,7 @@ Data from the R for Data Science tidytuesday repo: https://github.com/rfordatasc
 
 Inspired by the R visualistion: https://twitter.com/spren9er/status/1195826547724374018?lang=en
 
-This is a massive data set, so the data for this visualization was proportionally shrunk. First, the data was limited by common programming langauges, then a proportional sample was taken from each bucket of languages (see cran.py for details).
+This is a massive data set, so the data for this visualization was proportionally shrunk. First, the data was limited by common programming langauges, then a proportional sample was taken from each bucket of languages (see clean_cran_data.py for details).
 
 
 
