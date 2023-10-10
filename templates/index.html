@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Concentric Network of Cran Packages</title>
+  <title>Concentric Network of CRAN Packages</title>
 </head>
 <body>
-<h1 style="font-family: monospace;"> Concentric Network of Cran Packages</h1>
+<h1 style="font-family: monospace;"> Concentric Network of CRAN Packages</h1>
+<h3 style="font-family: monospace; font-weight: lighter;"> A way to visualize popular programming languages and a sampling of their CRAN packages.</h3>
+<h3 style="font-family: monospace; font-weight: lighter;"> Hover over a programming language to see associated CRAN packages and a brief description of the language.</h3>
+
+
 <!-- partial:index.partial.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +31,9 @@
   <style>
 
     svg{
-    padding:150px 100px 100px 300px;
+    padding:100px 50px 50px 50px;
+    overflow: visible
+
 }
 
   line.node-link, path.node-link {
@@ -36,12 +42,13 @@
 
   }
 
-  circle.node+text {
-    text-anchor: middle;
-  }
+  /*circle.node+text {
+    text-anchor: end;
+  }*/
   text {
     font-family: monospace;
     pointer-events: none;
+    padding-top: 20px;
   }
 
   </style>
@@ -114,8 +121,8 @@ var colorScheme = d3.scale.ordinal()
 
 var default_opacity = 0.3
 
-var width = 1200,
-    height = 1200;
+var width = 1000,
+    height =  1000;
 
 var force = d3.layout.force()
     .nodes(nodes)
@@ -128,6 +135,7 @@ var circleCoord = function(node, index, num_nodes){
     var pointAtLength = function(l){return circle.node().getPointAtLength(l)};
     var sectionLength = (circumference)/num_nodes;
     var position = sectionLength*index+sectionLength/2;
+    var angle = (index / (num_nodes / 2)) * Math.PI;
     return pointAtLength(circumference-position)
 }
 
@@ -136,6 +144,7 @@ var SmallcircleCoord = function(node, index, num_nodes){
     var pointAtLength = function(l){return circle2.node().getPointAtLength(l)};
     var sectionLength = (circumference)/num_nodes;
     var position = sectionLength*index+sectionLength/2;
+    var angle = (index / (num_nodes / 2)) * Math.PI;
     return pointAtLength(circumference-position)
 }
 
@@ -170,15 +179,16 @@ var determine_node_size = function(node){
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
+    .attr("viewBox", "0 0 1000 1000")
     .attr("height", height);
 
-var dim = width-100
+var dim = width-200
 var circle = svg.append("path")
-    .attr("d", "M 50, "+(dim/2+50)+" a "+dim/2+","+dim/2+" 0 1,0 "+dim+",0 a "+dim/2+","+dim/2+" 0 1,0 "+dim*-1+",0")
+    .attr("d", "M 100, "+(dim/2+50)+" a "+dim/2+","+dim/2+" 0 1,0 "+dim+",0 a "+dim/2+","+dim/2+" 0 1,0 "+dim*-1+",0")
     .style("fill", "#f5f5f5");
 
 var circle2 = svg.append("path")
-    .attr("d", "M 400, "+(dim/2+50)+" a "+(dim/2)/2+","+(dim/2)/2+" 0 1,0 "+dim/2+",0 a "+(dim/2)/2+","+(dim/2)/2+" 0 1,0 "+dim*-1/2+",0")
+    .attr("d", "M 300, "+(dim/2+50)+" a "+(dim/2)/2+","+(dim/2)/2+" 0 1,0 "+dim/2+",0 a "+(dim/2)/2+","+(dim/2)/2+" 0 1,0 "+dim*-1/2+",0")
     .style("fill", "#f5f5f5");
 
 force.start();
@@ -187,6 +197,7 @@ nodes_pkg_name.forEach(function(n, i) {
     var coord = circleCoord(n, i, nodes_pkg_name.length)
     n.x = coord.x
     n.y = coord.y
+
 });
 
 nodes_language.forEach(function(n, i) {
@@ -266,14 +277,84 @@ var node = gnodes.append("circle")
       .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
       .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
 
-var labels = gnodes.append("text")
-    .attr("dy", 5)
-    .attr("font-weight", "bold")
-    .text(function(d){if (pkg_name_list.includes(d.id)){
-        return '';} else{
-            return d.id;
+var determine_font_weight = function(d){
+    if(pkg_name_list.includes(d.id)){
+        return "lighter";
+    } else{
+        return "bold";
+    }
+};
+
+var determine_font_size = function(d){
+    if(pkg_name_list.includes(d.id)){
+        return "10px";
+    } else{
+        return "20px";
+    }
+};
+
+var determine_rotate = function(d){
+    if(pkg_name_list.includes(d.id)){
+        angle = (d.index / (pkg_name_list.length /2 )) * Math.PI; 
+        if (angle > Math.PI/2  && angle < 1.5 * Math.PI){
+
+            rotate = (angle * 180) / Math.PI - 180
+
+        } else {
+            rotate = (angle * 180) / Math.PI
         }
-    })
+
+        return "rotate(" + rotate.toString() + ")";
+    } else{
+        return 0
+    }
+};
+
+var determind_anchor = function(d){
+    if(pkg_name_list.includes(d.id)){
+        angle = (d.index / (pkg_name_list.length /2 )) * Math.PI; 
+        if (angle > Math.PI/2  && angle < 1.5 * Math.PI){
+
+            anchor = "start"
+
+        } else {
+            anchor = "end"
+        }
+
+        return anchor;
+    } else{
+        return "end"
+    }
+};
+
+var determine_dx = function(d){
+    if(pkg_name_list.includes(d.id)){
+        angle = (d.index / (pkg_name_list.length /2 )) * Math.PI; 
+        if (angle > Math.PI/2  && angle < 1.5 * Math.PI){
+
+            dx = 20
+
+        } else {
+            dx = -20
+        }
+
+        return dx;
+    } else{
+        return -20
+    }
+};
+
+
+
+
+var labels = gnodes.append("text")
+    .attr("transform", function(d){return determine_rotate(d)})
+    .attr("dx", function(d){return determine_dx(d)})
+    .attr("padding", "10px")
+    .attr("text-anchor", function(d){return determind_anchor(d)})
+    .attr("font-weight", function(d){return determine_font_weight(d)})
+    .attr("font-size", function(d){return determine_font_size(d)})
+    .text(function(d){return d.id})
 
 </script>
 
