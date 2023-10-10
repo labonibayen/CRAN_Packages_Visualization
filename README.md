@@ -2,14 +2,15 @@
 
 An interactive visualization of major programming languages and their CRAN packages. This is a Flask app built on a Digital Ocean droplet and utilizes D3 for the network graph. See here for live version: http://167.71.178.218/concentricnetwork
 
-<img width="972" alt="Screenshot 2023-10-09 at 4 48 30 PM" src="https://github.com/labonibayen/flask_network_graph/assets/26695981/6e64dcdc-c69a-4833-9257-d64e8be67ae6">
+<img width="703" alt="Screenshot 2023-10-10 at 1 39 46 AM" src="https://github.com/labonibayen/CRAN_Packages_Visualization/assets/26695981/29ee7ccb-d691-472d-9336-bcc62a93abeb">
+
 
 This visualization is responsive to mouse hovers. When mousing over a node, the node doubles in size and all edges connected to that node are highlighted.
 
 On mouseover, there are also tooltips that describe the CRAN package, or provide a brief description of the programming language.
 
-<img width="972" alt="Screenshot 2023-10-09 at 5 03 47 PM" src="https://github.com/labonibayen/flask_network_graph/assets/26695981/b82f0ec8-b97c-42c1-9c78-92f20f052511">
-<img width="972" alt="Screenshot 2023-10-09 at 5 03 19 PM" src="https://github.com/labonibayen/flask_network_graph/assets/26695981/02662019-b316-4cf9-ade4-b639d486b13a">
+<img width="703" alt="Screenshot 2023-10-10 at 1 39 56 AM" src="https://github.com/labonibayen/CRAN_Packages_Visualization/assets/26695981/c53e43f4-7e5a-4d3c-a8a7-46458f31e6bd">
+
 
 # Notes
 
